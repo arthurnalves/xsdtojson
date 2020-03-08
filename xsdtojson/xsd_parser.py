@@ -128,4 +128,4 @@ class XSDParser:
         try:
             return self.type_mappings[element_type]
         except KeyError:
-            return 'string'
+            return element_type.split(':')[-1]
